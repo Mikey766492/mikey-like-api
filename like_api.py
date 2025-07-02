@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route("/like", methods=["GET"])
 def send_like():
     user_id = request.args.get("id")
-    count = request.args.get("count", default=30)
+    count = request.args.get("count", default=99)
 
     if not user_id:
         return jsonify({
